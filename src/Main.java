@@ -7,7 +7,7 @@ public class Main {
         String [] tipo = {"sus","#11","#9","(b9#11)","#9b13","(b913)"};
         String [] notas = {"C7","Db7","D7","Eb7","E7","F7","Gb7","G7","Ab7","A7","Bb7","B7"};
 
-        for (int i=0; i<64;i++){
+        for (int i=0; i<128;i++){
             int randTipo = (int)(Math.random()*6);
             int randNotas = (int)(Math.random()*12);
             System.out.print(notas[randNotas]+tipo[randTipo]);
@@ -15,6 +15,9 @@ public class Main {
                 System.out.println();
             } else {
                 System.out.print("-");
+            }
+            if((i+1)%16==0){
+                System.out.println();
             }
         }
     }
